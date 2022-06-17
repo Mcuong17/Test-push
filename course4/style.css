@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Transfrom */
+.boxed {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    /* margin: 2rem; */
+    /* Transform: scale, rotate, translate, skew */
+    /* transform: scale(1, 3); */ /* scale sẽ kéo theo trục X và Y theo tham số truyền */
+    /* transform: rotate(45deg); */ /* rotate: xoay */
+    /* transform: translateX(); */ /* translate: dịch chuyển */
+    /* transform: skew(); */ /* skew: hình bình hành */
+    /* position: relative;
+    left: 10px;
+    bottom: -50px; */
+}
+
+/* Position absolute */
+
+
+    /*p{ font-size: 1.6rem;
+    color: white; */
+   /*  position: relative;
+    z-index: 2;} */ /* z-index phải đi kèm với position relative mới có tác dụng */
+
+
+/* .wrap {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    background-color: #000;
+} */
+
+.boxed {
+  /*  position: absolute; */
+    /* top: 10px;
+    left: 10px; */
+   /*  top: 10px;
+    right: 10px; */
+   /*  bottom: 10px;
+    right: 10px; */
+    /* bottom: 10px;
+    left: 10px; */
+    /* Căn giữa kết hợp top left 50% và transfrom translate để ra giữa */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* Căn giữa theo chiều ngang */
+   /*  left: 50%;
+    transform: translateX(-50%); */
+    /* Center chiều dọc */
+    /* top: 50%;
+    transform: translateY(-50%); */
+
+    /* Phủ hết overlay all */
+    /* cách 1 */
+   /*  top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+    /* cách 2 */
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto; */
+
+    /* overlay theo chiều ngang */
+    /* width: auto;
+    left: 0;
+    right: 0;
+    top: 0; */
+
+    /* overlay theo chiều dọc */
+    /* height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1; */
+}
+
+/* Position Fixed */
+
+body {
+    height: 2000px;
+    padding-top: 10rem;
+}
+
+.header {
+    width: 100%;
+    height: 10rem;
+    background-color: red;
+    position: fixed; /* cố định lại */
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}

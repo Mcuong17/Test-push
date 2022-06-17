@@ -1,0 +1,197 @@
+
+/* Sự khác nhau giữa rem và em */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+.em {
+    font-size: 32px;
+    background-color: #f55959;
+    width: 16em;
+    height: 16em;
+
+    /* 1em = 32px
+    Là đơn vị phụ thuộc vào font-size của chính nó hoặc phần tử chứa nó
+    */
+}
+
+
+.rem {
+    font-size: 32px;
+    background-color: rgb(152, 211, 76);
+    width: 10rem;
+    height: 10rem;
+    /*
+    Là đơn vị phụ thuộc vào thuộc tính font-size của thẻ html ;
+    
+        100% = 16px
+        ?% = 10px
+
+        --> ? = 62.5% : sử dụng font-size = 62.5% cho thẻ html sẽ được 10px = 1rem
+     */
+     border: 5px solid red ;
+     border-top-left-radius: 20px ;
+     border-radius: 50%;
+}
+
+.margin {
+    width: 14rem;
+    height: 14rem;
+    background-color: brown;
+
+    /* margin 1 giá trị top=right=bottom=left=20px */
+    margin: 20px;
+    /* margin 2 giá trị top=bottom=30px left=right=40px */
+    margin: 30px 40px;
+    /* margin 3 giá trị top=30px left=right=40px bottom=50px */
+    margin: 30px 40px 50px;
+
+    /* Căn về bên trái or phải */
+    margin-left: auto;
+    /* Căn ra giữa, center chỉ đúng với khối block*/
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    /* margin collapse nếu có hai khối trên hoặc dưới nhau, sẽ chỉ nhận giá trị lớn hơn */
+    margin-bottom: 100px;
+    /* margin có thể có giá trị âm còn padding thig không */
+}
+
+.margin2 {
+    margin-top: 70px;
+}
+
+.padding {
+    width: 10rem;
+    height: 10rem;
+    background-color: #2979ff;
+    overflow-y: scroll;
+    margin: 0 auto;
+    /* padding 1 giá trị top=right=bottom=left=20px */
+    padding: 20px;
+    /* padding 2 giá trị top=bottom=30px left=right=40px */
+    padding: 30px 40px;
+    /* padding 3 giá trị top=30px left=right=40px bottom=50px */
+    padding: 30px 40px 50px;
+
+    /* Căn về bên trái hoặc bên phải */
+    padding-right: 10px;
+    /* Căn ra giữa, center chỉ đúng với khối block*/
+   padding-left: auto;
+   padding-right: auto;
+   padding: 0 auto;
+}
+
+.boxed {
+    width: 10rem;
+    height: 10rem;
+    background-color: #712db1;
+    border: 5px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    box-sizing: border-box;
+    /* 
+        content box:
+        width = width + border-left + border-right + padding-left + padding-right     
+        height = height + border-top + border-bottom + padding-top + padding-bottom   
+        width = 100px + 5px + 5px + 20px + 20px = 150px   
+        height = 100px + 5px + 5px + 20px + 20px = 150px   
+    */
+
+    /* 
+        border-box: 
+        width = width - border-left - border-right - padding-left - padding-right
+        height = height - border-top - border-bottom - padding-top - padding-bottom
+        width = 100px - 5px - 5px - 20px - 20px = 50px
+        width = 100px - 5px - 5px - 20px - 20px = 50px
+    */
+
+}
+
+.display {
+    font-size: 2rem;
+    width: 10rem;
+    height: 10rem;
+    color: blanchedalmond;
+    text-decoration: none;
+    background-color: black;
+    display: inline-block;
+}
+
+.font {
+    font-size: 1.6rem;
+    font-weight:500;
+    line-height: 1.4;
+    text-align: left;
+    text-align: right;
+    max-width: 300px;
+    text-align: center;
+    text-align: justify;
+    letter-spacing: 1px; /* Khoảng cách giữa các kí tự */
+    word-spacing: 2px ; /* Khoảng cách giữa các từ */
+    /* hiển thị dấu 3 chấm trên 1 hàng */
+   /*  white-space: nowrap; */ /* Chữ trên một dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* hiển thị dấu 3 chấm trên hàng thứ 3 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all; /* xuống dòng mọi kí tự */
+    word-break: break-word; /* xuống dòng theo chữ */
+}
+
+.img {
+    text-align: center;
+}
+
+.image {
+    width: 20rem;
+    height: 20rem;
+    margin: 3rem auto auto;
+    object-fit: cover; /* Căn chỉnh ảnh để không bị méo, vừa với khung */
+    object-position: top; /* lấy ảnh bắt đầu từ chiều nào tùy vào top left right hay bottom */
+
+    /* Để căn giữa với thẻ inline, cần đặt trong khối rồi sử dụng text-align: center hoặc đưa về thẻ block sử dụng margin 0 auto */
+    display: inline;
+    border-radius: 50%;
+}
+
+.psudo {
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.psudo__link {
+    color: #bbeb0f;
+    font-size: 3rem;
+}
+
+.psudo__link:hover {
+    color: #6A5AF9;
+}
+
+.psudo__link:active {
+    color: #F62682;
+}
+
+.psudo__link:visited { /* đã ấn vào rồi */
+    color: red;
+}

@@ -1,0 +1,130 @@
+
+
+/* .title::before {
+    content: "My name";
+}
+.title:after {
+    content: "HUBT";
+} */
+
+.title {
+    position: relative;
+    margin: 8rem;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.title::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    border-radius: 50%;
+    /* Ket hop voi position de hien block */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.line {
+    text-align: center;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.line::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line__text {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.user {
+    width: 3rem;
+    height: 3rem;
+    margin: 5rem auto;
+    color: rgb(136, 211, 15);
+    position: relative;
+    border-radius: 4px;
+}
+
+.user::after {
+    content: "";
+    background-color: currentColor; /* Ăn màu theo thẻ chứa nó hoặc chính nó */
+    opacity: 0.3;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.user__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.percent1,
+.effect {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2rem;
+    margin: 5rem;
+    text-align: center;
+    border: 1px solid red;
+    background-color: #fff;
+    transition: color 0.25s ease-in;
+    position: relative;
+    z-index: 1;
+}
+
+.effect::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    z-index: -1;
+    transition: height 0.25s ease-in;
+}
+
+.effect:hover::before {
+    height: 100%;
+}
+
+.percent1:hover::before {
+    height: 90%;
+}
+
+.percent2:hover::before {
+    height: 60%;
+}
+
+.percent3:hover::before {
+    height: 30%;
+}
+
+.effect:hover {
+    color: black;
+}

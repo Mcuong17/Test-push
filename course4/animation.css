@@ -1,0 +1,114 @@
+.boxed {
+    width: 5rem;
+    height: 5rem;
+    background-color: purple;
+   /*  transform: translateX(20rem); */
+   animation-name:move;
+   animation-duration: 1s; /* thời gian chuyển động */
+   animation-direction: alternate; /* hướng chạy: chạy đi chạy lại */
+   animation-iteration-count: 1; /* số lần chạy, infinite: vô tận */
+    /* animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1); *//* kiểu chạy */
+    animation-fill-mode: backwards; /* forwards: chạy tới, backwards: chạy ngược lại */
+    animation: move 2s infinite alternate 4s ;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20rem);
+    }
+}
+
+.boxed2 {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    animation: down 2s alternate infinite ;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10rem);
+    }
+}
+
+.circle__loading {
+    width: 3rem;
+    height: 3rem;
+    background-color: violet;
+    margin: 5rem auto;
+    border-radius: 50%;
+    
+    position: relative;
+}
+/* tạo animation giữ khối circle, khối psudo sẽ có animation */
+.circle__loading::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fade 1s infinite linear;
+}
+
+@keyframes fade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.double__circle {
+    text-align: center;
+    margin: 5rem;
+   animation: loading 1s infinite ;
+}
+
+.circle__item {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #000;
+    margin: 0 8px;
+    border-radius: 50%;
+}
+
+.circle__item:first-child {
+    border-color: rgb(6, 240, 228);
+}
+
+@keyframes loading {
+    50% {
+        transform: rotate(200deg);
+    }
+    75% {
+        transform: rotate(160deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.harf-circle {
+    width: 5rem;
+    height: 5rem;
+    margin: 5rem auto;
+    border: 3px solid;
+    border-radius: 50%;
+    border-bottom: lawngreen;
+    border-left: lightcoral;
+    border-top: purple;
+    border-right: saddlebrown;
+}

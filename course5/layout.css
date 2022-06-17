@@ -1,0 +1,28 @@
+:root {
+
+}
+*{
+    font-size: 62.5%;
+}
+
+.img__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -3rem;
+    margin: 5rem 0 0 -3rem;
+}
+
+.img__item {
+    width: 25%;
+    margin-left: 3rem;
+   /* Sử dụng margin left ở thẻ con và margin left âm ở thẻ cha để space betwwen cách một khoảng và dính với lề */
+   border-radius: 1rem;
+   overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

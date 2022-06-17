@@ -1,0 +1,64 @@
+
+<!-- # Tạo 1 file HTML như đã học và làm các bài tập sau:
+
+
+1. Liệt kê 10 thẻ inline, 10 thẻ block và các loại thẻ semantic HTML5.
+2. Làm 1 ví dụ về BEM có tên là 'boy'
+3. Làm 1 ví dụ về sự kết hợp giữa thẻ inline và thẻ block
+4. Áp dụng kiến thức về BEM đặt tên cho UI này https://collectui.com/designers/maxjosino/dropdown
+    Block có tên là dropdown -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExCourse1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <p>
+        1. 10 inline: a, strong, em, b, i, span, button, option, lable, tr
+        2. 10 block: div, table, form, h1, p, td, th, ol, ul
+        3. Semantic: header, footer, nav, section, article, main, iframe, span, aside
+    </p>
+
+    <p>
+        Block: Boy
+        Element:  Boy__hair, Boy__eyes, Boy__height
+        Modifier: yelllow, blue, tall, fat, high, low
+
+        <div class="boy">
+            <div class="boy__hair  boy__hair--yellow"></div>
+            <div class="boy__eyes boy__eyes--blue "></div>
+
+        </div>
+    </p>
+
+    <p>
+        <div> <a href="frontend"></a> </div>
+        <header><strong>Text</strong></header>
+        <article> <h1>block</h1> </article>
+        <div> <a href="frontend"></a> </div>
+    </p>
+
+    <p>
+            <div class="dropdown">
+               <div class="dropdown__select">
+                   <span class="dropdown__selected"></span>
+                   <i class="fas fa-caret-down dropdown__caret "></i>
+               </div>
+
+               <div class="dropdown__list">
+                   <div class="dropdown__item">
+                        <span class="dropdown__title"></span>
+                        <i class="fas fa-plus dropdown__icon"></i>
+                   </div>
+               </div>
+            </div>
+
+    </p>
+
+</body>
+</html>

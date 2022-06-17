@@ -1,0 +1,27 @@
+.boxed {
+    /* width: 5rem;
+    height: 5rem; */
+    /* background-color: black; */
+    margin: 5rem auto;
+   /*  border-top: 10px solid green;
+    border-right: 10px solid yellow;
+    border-bottom: 10px solid red;
+    border-left: 10px solid orange; */
+    display: inline-block;
+    /* Tam giác top */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid green;
+    /* Tam giác phải */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid orange;
+    /* Tam giác dưới */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid red ;
+    /* Tam giác trái */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid yellow;
+}

@@ -1,0 +1,14 @@
+/* 
+
+    Cấu trúc của 1 file CSS :
+
+    selector {
+        property: value;
+    }
+
+    selector: tags html: div, a, main, p...
+            class: .demo, .boy, .tree ....
+            ID: #container, #footer..
+    property: tags css: color, background....
+    value: gia tri    red, yellow...       
+*/

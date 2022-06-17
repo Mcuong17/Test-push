@@ -1,0 +1,52 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: #00aefd;
+}
+
+/* Lồng code với sass */
+.header-top-text {
+  color: red;
+  font-size: 1.4rem;
+}
+.header-top-text:hover {
+  color: sandybrown;
+}
+.header-content {
+  font-size: 1.6rem;
+  color: #ffa400;
+}
+
+/* Cau dieu kien Sass */
+.boxed {
+  /*  width: 10rem;
+   height: 10rem; */
+  width: 10rem;
+  height: 20rem;
+  /* background-color: red; */
+  background-color: #00aefd;
+}
+
+.container {
+  width: 30rem;
+  height: 40rem;
+  background-color: #ffa400;
+  position: relative;
+}
+
+.boxing {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+.list {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row; /* giá trị mặc đinh theo chiều ngang */
+    /* flex-direction: row-reverse; chạy ngược lại */
+    /* Căn theo chiều dọc */
+    align-items: stretch; /* các cột cao bằng nhau */
+    align-items: flex-start; /* Căn phía trên đầu */
+    align-items: flex-end; /* Căn dưới */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    align-items: baseline; /* Căn theo điểm cuối của chữ */
+    /* Justifi-content: căn theo trục main axis */
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around; /* khoảng trống xung quanh */
+    justify-content: space-evenly; /* khoảng tráng bằng nhau */
+    flex-wrap: nowrap; /* kh xuống hàng */
+    flex-wrap: wrap; /* xuống hàng */
+    flex-flow: row nowrap; /* Viết tắt của flex direction và flex wrap */
+    /* flex-direction: column; */ /* Tương tự nhưng đổi thành cột theo chiều dọc */
+    order: 1; /* Sắp xếp theo thứ tự chọn*/
+}
+
+.list_item {
+    padding: 1rem;
+    background-color: orange;
+    margin: 0 5px;
+    width: 50%;
+}
+
+.list_item:first-child{
+    font-size: 5rem;
+    align-self: flex-start;
+    order: 3;
+}
+
+.list_item:nth-child(2) {
+    order: 2;
+}
+
+.list_item:last-child {
+    align-self: flex-end; /* Chỉ dùng cho phần tử con */
+    order: 1;
+}
+
+.user {
+    width: 5rem;
+    height: 5rem;
+    background-color: slateblue;
+    border-radius: 5px;
+    /* center với display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: snow;
+    font-size: 2rem;
+}
+/* Hàm calc: tính toán */

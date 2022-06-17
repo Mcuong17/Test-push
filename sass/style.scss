@@ -1,0 +1,72 @@
+$primary-color:#00aefd;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    color: $primary-color;
+}
+/* Lồng code với sass */
+.header {
+    &-top-text {
+        color: red;
+        font-size: 1.4rem;
+        &:hover {
+            color: sandybrown;
+        }
+    }
+    &-content {
+        font-size: 1.6rem;
+        color: #ffa400;
+    }
+}
+//mixin mixinName(){}
+@mixin size ($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin bgc ($background:#000) {
+    background-color: $background;
+}
+
+/* Cau dieu kien Sass */
+
+@mixin absoluteCenter($direction:"both") {
+    position: absolute;
+   @if $direction =="both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   }
+   @if $direction =="left" {
+       left: 50%;
+       transform: translateX(-50%);
+   }
+   @if $direction == "top" {
+       top: 50%;
+       transform: translateY(-50%);
+   }
+}
+
+.boxed {
+   /*  width: 10rem;
+    height: 10rem; */
+    @include size(10rem,20rem );
+    /* background-color: red; */
+    @include bgc(#00aefd);
+}
+.container {
+    width: 30rem;
+    height: 40rem;
+    background-color: #ffa400;
+    position: relative;
+}
+.boxing {
+   @include size(5rem,5rem );
+   @include bgc(#fff);
+   @include absoluteCenter(left);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+
+        BEM: Block Element Modifier
+
+        Block__Element--Modifier
+
+        Block: đối tượng
+        Element: phần tử của đối tượng
+        Modifier: tính chất của đối tượng
+    ex: 
+
+        Block: laptop
+        Element: keyboard, mouse, screen..
+        Modifier: small, big, expensive
+
+        BEM -> laptop__keyboard, laptop__mouse...
+                laptop--small, laptop--big...
+                laptop__screen--big, laptop__mouse--expensive... 
+
+     -->
+
+     <!-- ex1: flash message 
+        
+        Block: flash-message
+        Element: title, description, image, button
+        Modifier: primary, secondary
+
+
+        block 1:
+        flash-message
+        flash-message__title, flash-message__desc, flash-message__image, flash-message__button
+        flash-message__title--primary, flash-message__desc--primary, flash-message__image--primary, flash-message__button--primary
+    
+         block 2:
+        flash-message
+        flash-message__title, flash-message__desc, flash-message__image, flash-message__button
+        flash-message__title--secondary, flash-message__desc--secondary, flash-message__image--secondary, flash-message__button--secondary
+    
+    -->
+    <div class="flash-message" >
+        <div class="flash-message__image flash-message__image--primary "></div>
+        <div class="flash-message__title flash-message__title--primary "></div>
+        <div class="flash-message__desc flash-message__desc--primary"></div>
+        <div class="flash-message__button flash-message__button--primary"></div>
+    </div>
+
+    <div class="flash-message" >
+        <div class="flash-message__image flash-message__image--secondary "></div>
+        <div class="flash-message__title flash-message__title--secondary "></div>
+        <div class="flash-message__desc flash-message__desc--secondary"></div>
+        <div class="flash-message__button flash-message__button--secondary"></div>
+    </div>
+</body>
+</html>

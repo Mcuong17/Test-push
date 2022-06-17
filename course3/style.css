@@ -1,0 +1,354 @@
+:root {
+    --primary-color:aqua;       /* Biến global có tác dụng toàn trang */
+    --secondary-color: violet;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+.boxed {
+    width: 20rem;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, #00aefd, #ffa400 );
+    /* liner-gradient: 
+        -direction: to right, to left, to botttom, to top, to right bottom, to left top, to right top
+        -120deg
+        -color1
+        -color2    
+    
+    
+    */
+}
+
+.title {
+    /* --primary-color: red; */ /* Biến local có tác dụng trong một thẻ, ghi đè lên biến global */
+    font-size: 3rem;
+    display: inline-block;
+    margin: 4rem 6rem 4rem;
+    background-image: linear-gradient(to left top, var(--secondary-color), var(-primary-color));
+    background-image: linear-gradient(to left top, var(--secondary-color), var(--primary-color));
+    color: transparent; /* màu chữ trong suốt */
+    -webkit-background-clip: text; /* để nền của web là chữ */
+    background-clip: text;
+}
+
+@supports not (-webkit-background-clip: text) {  /* @supports hỗ trợ thuộc tính webkit nếu như trình duyệt có hỗ trợ sẽ hiển thị trong supports nếu không sẽ hiện chữ theo màu ở thẻ trên (có thể dùng thêm supports not là nếu không hỗ trợ) */
+    .title {
+        color: #00aefd;
+        
+    }
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    /* hiển thị ảnh chồng lên nhau sử dụng bgr gradient và chỉnh độ mờ, sử dụng mã màu rgba, cái nào xếp trước sẽ hiển thi trước */
+    background-image: linear-gradient(to right, rgba(255, 192, 203, 0.76), rgba(0, 255, 255, 0.616)), url(https://images.unsplash.com/photo-1636996923299-a51a16c64df6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80);
+    background-size: cover;
+}
+
+/*  Sự khác nhau giữa opacity, visibility: hidden và display: none
+    opacity: 0:  Vẫn chiếm diện tích, có thể nhấn đc
+    visivlity: hidden: Vẫn chiếm diện tích và không ấn vào được
+    display: none: không chiếm diện tích và không ấn vào được
+
+
+*/
+
+.shadow {
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+    margin: 2rem auto;
+    box-shadow: 9px 14px 7px 5px #ffa400;;
+    /* box-shadow: x y blur scale color, sử dụng Chrome đẻ chinhr chính xác hơn */
+}
+
+.shadow-text {
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -20px 8px 3px cyan;;
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+ li {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+li:first-child { /* phần tử đầu tiên */
+    color: blue;
+}
+
+li:last-child { /* Phần tử cuối cùng */
+    color: blueviolet;
+}
+
+li:nth-child(2) {  /* select đến phần tử ứng với tham số truyền vào */
+    color: chartreuse;
+}
+
+li:nth-last-child(2) {
+    color: crimson; /* select đến phần tử ứng với tham số truyền nhưng từ dưới lên trên */
+}
+
+li:nth-child(odd) { /* select đến phần tử lẻ (odd) */
+    color: darkmagenta;
+}
+
+li:nth-child(even) {  /* select đến phần tử có số chẵn (even) */
+    color: aqua;
+}
+
+li:not(:first-child) { /* select đến mọi phần tử nhưng trừ phần tử đầu tiên */
+    color: chocolate;
+}
+
+li:not(:last-child) { /* select đến mọi phần tử nhưng trừ phần tử cuối cùng */
+    color: aquamarine;
+}
+
+/* an + b ứng với n chạy từ 0 */
+li:nth-child(2n + 1) {
+    color: #ffa400;
+}
+
+li:first-of-type { /* of-type cũng giống như child nhưng chọn theo kiểu dữ liệu */
+    color: aqua;
+}
+
+/* Css combinators */
+
+h3 + .title2 {    /* select đến phần tử kế bên cạnh h3 ngay đằng sau h3 */
+    color: #ffa400;
+}
+
+h3 + .title2  +.title3 {
+    color: aqua;
+}
+
+h3 ~ .title5 {
+    color: brown;
+}
+
+a[href ^="https" ] { /* select đến thẻ bắt đầu bằng https */
+    color: plum;
+    font-size: 2rem;
+}
+
+a[href $=".vn"] { /* select đến thẻ kết thúc bằng .vn */
+    color: red;
+}
+
+a[href *="www"] { /* Có chứa www */
+    color: seagreen;
+}
+
+div[data-title = "value"] { /* select đến thẻ có data-title chính xác chứa value */
+    color: steelblue;
+}
+
+p::first-letter {  /* Select đến kí tự đầu tiên của văn bản */
+    color: tomato;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+p::first-line {  /* Select đến dòng đầu tiên */
+    color: violet;
+}
+
+.boxed2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #2949ff;
+    /* transition: property time esasing */
+   /*  transition: background-color 1s linear;
+    transition-delay: 1s; */
+    /* transition: background-color 2s ease-in, color 2s ease-in; */
+    transition: all 0.5s linear; /* shot hand */
+    opacity: 0;
+}
+.boxed2:hover {
+   background-color: aquamarine;
+   color: azure;
+   opacity: 1;
+}
+
+/* .wrap {
+    width: 20rem;
+    height: 20rem;
+    opacity: 0;
+    transition: all 0.5s linear;
+} */
+/* .wrap:hover {
+    opacity: 1;
+    
+} */ /* khi muốn hover vào rồi mới hiện ra một box: sử dụng opacity và đặt transtion tương ứng */
+
+/* Bài tập chương 3 */
+
+.text-gradient {
+   
+    font-size: 10rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    background-image: linear-gradient( to right, rgb(47,201,208), rgb(50,17,108));
+}
+
+.btn {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    width: 18rem;
+    height: 4rem;
+    text-align: center;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 2rem;
+    border: none;
+}
+
+.button--pink {
+    background-color: rgb(250,62,156);
+    box-shadow: 0px 6px 15px 0px rgb(250,62,156);
+}
+
+.button--green {
+    background-image: linear-gradient(to bottom, rgb(149,247,196), rgb(66,237,228));
+    box-shadow: 0px 6px 15px 0px rgb(66,237,228);
+}
+
+.button--yellow {
+    background-image: linear-gradient(to bottom, rgb(254,244,172), rgb(255,178,16));
+    box-shadow: 0px 6px 15px 0px rgb(255,178,16);
+}
+
+.button--aqua {
+    background-image: linear-gradient(to bottom, rgb(107,174,255), rgb(182,111,253));
+    box-shadow: 0px 6px 15px 0px rgba(182,111,253);
+}
+
+.button--green2 {
+    background-image: linear-gradient(to bottom, rgb(165,244,165), rgb(87,216,90));
+    box-shadow: 0px 6px 15px 0px rgb(87,216,90);
+}
+
+.button--violet {
+    background-image: linear-gradient(to bottom, rgb(181,128,220), rgb(135,63,189));
+    box-shadow: 0px 6px 15px 0px rgb(135,63,189);
+}
+
+.button--orange {
+    background-image: linear-gradient(to bottom, rgb(247,120,51), rgb(238,43,37));
+    box-shadow: 0px 6px 15px 0px rgb(238,43,37);
+}
+
+.button--blue {
+    background-image: linear-gradient(to bottom, rgb(147,205,242), rgb(6,105,251));
+    box-shadow: 0px 6px 15px 0px rgb(6,105,251);
+}
+
+.button--green3 {
+    background-image: linear-gradient(to bottom, rgb(140,255,160), rgb(42,255,48));
+    box-shadow: 0px 6px 15px 0px rgb(42,255,48);
+}
+
+.color__item {
+    display: inline-block;
+    width: 10rem;
+    height: 15rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.color__item:first-child {
+    background-color: #A24BF0;
+}
+
+.color__item:nth-child(2) {
+    background-color: #38DBB2;
+}
+
+.color__item:nth-child(2):hover {
+    background-color: aquamarine;
+}
+
+.color__item:nth-child(3) {
+    background-color: #25C2E3;
+}
+
+.color__item:nth-child(4) {
+    background-color: #EA344F;
+}
+
+.color__item:nth-child(5) {
+    background-color: #DD44A7;
+}
+
+.color__item:last-child {
+    background-color: #F7AC2A;
+}
+
+/* .color__item:nth-child(odd) {
+    background-color: aqua;
+} */
+
+/* .color__item + .color__item {
+    background-color: #EA344F;
+} */
+
+.color__item:hover{
+   background-color: plum;
+}
+
+div[data-link ^= "https"] {
+    color:red;
+}
+
+div[data-link $= ".vn"] {
+    color: aquamarine;
+}
+
+div[data-name *= "hello" ] {
+    color: blueviolet;
+}
+
+input[type = "email"] {
+    border: 1px solid greenyellow;
+}
+
+input[type = "text"] {
+    border: 1px solid #ff2f97;
+}
+
+

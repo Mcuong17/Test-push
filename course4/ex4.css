@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.bar {
+    width: 20rem;
+    height: 1rem;
+    background-color: #ccc;
+    margin: 8rem;
+    border-radius: 4rem;
+    position: relative;
+}
+
+.bar__progress {
+    width: 50%;
+    height: 100%;
+    background-color: purple;
+    border-radius: inherit;
+}
+
+.bar__circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: purple;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,82 @@
+* {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.box {
+    width: 20rem;
+    height: 20rem;
+    background-color: #ffa400;
+    border: 1px solid yellow;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.text3 {
+    max-width: 50rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text1 {
+    max-width: 10rem;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   color: #2979ff;
+
+}
+
+.box2 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1636861780896-48306b53fbf5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1033&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.image {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+img {
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.link {
+    text-decoration: none;
+    padding: 1rem 5rem;
+    background-color: violet;
+    color: white;
+}
+
+.link:hover {
+    color: #ffa400;
+    background-color: aqua;
+} 
+
+.link--rouder{
+    
+    border-radius: 4px;
+}
+
+.link--round {
+    border-radius: 60px;
+}
+
